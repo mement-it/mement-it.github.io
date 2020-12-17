@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Settings</title>
+
+    <!-- MATERIAL DESIGN ICONIC FONT -->
+    <link rel="stylesheet"
+        href="design_files/fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
+
+    <!-- STYLE CSS -->
+    <link rel="stylesheet" href="design_files/css/font.css">
+    <link rel="stylesheet" href="design_files/css/styleonly.css">
+    <link rel="stylesheet" href="design_files/css/responsive.css">
+    <link rel="shortcut icon" type="image/png" href="design_files/images/favicon.png" />
+
+    <title>Account Settings - Mement Account</title>
+</head>
+
+<body>
+    <div class="wrapper">
+
+
+        <div class="inner">
+            <div class="frm-container setup-container">
+                <div class="form-txt">
+                    <h1>Account</h1>
+                    <p style="margin-bottom:30px;width: 100%;">Edit your account/profile on the go. Settings will be applied in seconds..</p>
+                </div>
+                <form class="set-form">
+                    <img src="design_files/images/de-pic.png" class="prev-dp" id="dp-prev" alt="@yourself">
+                    <div class="form-group">
+                        <input id="firstName" type="text" class="form-control setup-control" placeholder="Your Name" name="">
+                    </div>
+                    <input style="display:none" type="file" id="dp-up">
+                    <div class="form-wrapper">
+                        <select name="" class="form-control setup-control" id="gender">
+                            <option value="" disabled selected>Gender</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-wrapper">
+                        <input type="text" placeholder="You story (bio)" class="form-control setup-control" id="bio">
+                    </div>
+                    <div class="form-wrapper">
+                        <input type="number" style="display: none;" class="form-control setup-control" placeholder="Phone Number" name=""id="phone">
+                    </div>
+                    <div class="form-wrapper">
+                        <input type="text" class="form-control setup-control" placeholder="Your address" id="address">
+                    </div>
+                    <div class="form-group container-login100-form-btn">
+                        <button class="btn-signup form-btn setup-control" id="btn-update" type="button">Save</button>
+                    </div>
+                    <div class="message-pop">
+                        <div class="msg-text">
+                            <h4 id="msg_title"></h4>
+                            <p id="msg_des"></p>
+                        </div>
+                        <a id="close-msg" href="javaScript:void(0)">Okay</a>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="progress-lay">
+        <div class="prog-inner">
+            <div class="prog-inner-img"></div><br>
+            <div class="prog-bar"></div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-storage.js"></script>
+
+    <script src="js/app.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/create-account.js"></script>
+    <script src="js/accountsettings.js"></script>
+    <script src="js/prifile-upload.js"></script>
+    <script>
+
+        firebase.auth().onAuthStateChanged(function (user) {
+
+            if (!user) {
+                window.location.href = "sign-in.html"
+            }
+            else{  
+                try {
+                    console.log(user.email)
+                } catch (error) {
+                    console.log('error')
+                }              
+            }
+        });
+    </script>
+</body>
+
+</html>

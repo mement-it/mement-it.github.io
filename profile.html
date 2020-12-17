@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>..</title>
+
+    <!-- MATERIAL DESIGN ICONIC FONT -->
+    <link rel="stylesheet"
+        href="design_files/fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
+
+    <!-- STYLE CSS -->
+    <link rel="stylesheet" href="design_files/css/font.css">
+    <link rel="stylesheet" href="design_files/css/styleonly.css">
+    <link rel="stylesheet" href="design_files/css/responsive.css">
+    <link id="favicon-prof" rel="shortcut icon" type="image/png" href="design_files/images/favicon.png" />
+</head>
+
+<body>
+    <header>
+        <div class="border-bar">
+            <a href="index.html">
+                <img src="design_files/images/favicon.png" class="fav" alt="Mement">
+            </a>
+            <div></div>
+            <a href="index.html" class="write-a-story-link">Go to home →</a>
+
+    </header>
+    <div class="wrapper">
+        <div class="profile-inner">
+            <div>
+                <img id="profile-pic-full" src="design_files/images/registerback.jpg" alt="@yourself">
+            </div>
+            <div>
+                <h1 id="view-name" class="user-name-bio">Harry Tom</h1>
+                <p id="view-bio" class="bio-full">Apparently, this user prefer keeping mistery on him.</p>
+                <div id="view-add" class="user-box">harrytom2606@gmail.com</div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footr">
+            <nav class="links-rd" id="footr-content">
+                <a href="">Terms</a>
+                <span style="margin:0 5px;">·</span>                   
+                <a href="">About</a>
+                <span style="margin:0 5px;">·</span>  
+                <a href="write.html">Write a story</a>
+                <span style="margin:0 5px;">·</span>  
+                <a href="setting.html">Settings</a>
+            </nav>
+        </div>
+    </footer>
+
+
+    <div class="progress-lay">
+        <div class="prog-inner">
+            <div class="prog-inner-img"></div><br>
+            <div class="prog-bar"></div>
+        </div>
+    </div>
+
+    <script>
+        firebase.auth().onAuthStateChanged(function (user) {
+
+        if (!user) {
+            window.location.href = "sign-in.html"
+        }
+        else{  
+            try {
+                console.log(user.email)
+            } catch (error) {
+                console.log('error')
+            }              
+        }
+        });
+</script>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-storage.js"></script>
+
+    <script src="js/app.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/userinfo.js"></script>
+
+</body>
+
+</html>

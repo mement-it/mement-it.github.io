@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reset your password - Mement account manager</title>
+    <link rel="shortcut icon" type="image/png" href="design_files/images/favicon.png" />
+
+
+    <!-- MATERIAL DESIGN ICONIC FONT -->
+    <link rel="stylesheet"
+        href="design_files/fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
+
+    <!-- STYLE CSS -->
+    <link rel="stylesheet" href="design_files/css/font.css">
+    <link rel="stylesheet" href="design_files/css/styleonly.css">
+    <link rel="stylesheet" href="design_files/css/responsive.css">
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <div class="inner">
+
+            <div class="frm-container">
+                <div class="form-txt">
+                    <h1>Forgot?</h1>
+                    <p style="margin-bottom:30px;width: 100%;">Don't worry, we are here for you to recover your password! It's easy as you blink your eyes!</p>
+                </div>
+                
+                <form class="s-form">
+    
+                    <div class="form-wrapper">
+                        <input type="email" class="form-control" placeholder="Email Adress" name="" id="email">
+                    </div>
+    
+                    <div class="form-group container-login100-form-btn">
+                        <button id="btn-resetPassword" type="button" class="form-btn" style="margin-bottom: 10px;">Continue</button>
+                        <p style="font-size: 10px;line-height: 12px;">
+                            Please provide your email and you will receive a email shortly to set new password.
+                        </p>
+                    </div>
+                    <div class="message-pop">
+                        <div class="msg-text">
+                            <h4 id="msg_title">Message</h4>
+                            <p id="msg_des">This is a truly empowering motivational quote, especially for all those in the world who are suffering from an inferiority complex influenced elements in society and sometimes families. J</p>
+                        </div>
+                        <a id="close-msg" href="javaScript:void(0)">Okay</a>
+                    </div>
+
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-storage.js"></script>
+    
+    <script src="js/app.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/forgot.js"></script>
+
+
+    <script>
+        firebase.auth().onAuthStateChanged(function (user) {
+
+            if (user) {
+                window.location.href = "index.html";
+            }
+        });
+    </script>
+
+</body>
+
+</html>

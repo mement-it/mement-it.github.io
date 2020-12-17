@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mement - Where ideas reach the world</title>
+
+    <link rel="stylesheet" href="design_files/css/font.css">
+    <link rel="stylesheet" href="design_files/css/styleonly.css">
+    <link rel="stylesheet" href="design_files/css/responsive.css">
+    <link rel="shortcut icon" type="image/png" href="design_files/images/favicon.png" />
+
+
+</head>
+
+<body>
+
+    <header>
+        <div class="headr">
+            <div class="doc-head">
+                <div class="fav-search" style="display: flex;">
+                    <img src="design_files/images/favicon.png" class="fav" alt="Mement">
+                    <input type="text" id="search-qry" class="search-bar" placeholder="Search Mement">
+                </div>
+                <div class="prof-opt" style="display: flex;">
+                    <div class="newpost-icon search-ex" onclick="viewSearch()" >
+                        <div class="add-icon" style="background-image: url('design_files/images/search.svg');"></div>
+                    </div>
+                    <div class="newpost-icon">
+                        <a title="Write a new post!" href="write.html">
+                            <div class="add-icon"></div>
+                        </a>
+    
+                    </div>
+                    <div>
+                        <img src="design_files/images/monkey.gif"  class="fav home-prof" id="my-pic" alt="Mement">
+                        <div class="pop-drop" id="pop-home">
+                            <a href="write.html">
+                                <h6 class="pop-option">New Post</h6>
+                            </a>
+                            <a href="#" id="view-myprofile">
+                                <h6 class="pop-option">View profile</h6>
+                            </a>
+                            <a href="settings.html">
+                                <h6 class="pop-option">Settings</h6>
+                            </a>
+                            <a href="#">
+                                <h6 class="pop-option">Explore</h6>
+                            </a>
+                            <a href="javaScript:void(0)" onclick="signOut()">
+                                <h6 class="pop-option">Log out</h6>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="horiz-tag">
+                <div style="
+                        width: 21px;
+                        height: 21px;
+                        margin-top: 5px;
+                        background-image: url(design_files/images/left.svg);
+                        cursor: pointer;
+                    "
+                    id="slideLeft"
+                    >
+                </div>
+
+                <div class="scrollmenu" id="tags-menu">
+                    <a href="#home"onclick="filterTag('')">All</a>
+                    <a href="#home"onclick="filterTag('Technology')">Technology</a>
+                    <a href="#news"onclick="filterTag('Design')">Design</a>
+                    <a href="#contact"onclick="filterTag('Music')">Music</a>
+                    <a href="#about" onclick="filterTag('Travel')">Travel</a>
+                    <a href="#support" onclick="filterTag('Food')">Food</a>
+                    <a href="#blog"onclick="filterTag('Culture')">Culture</a>
+                    <a href="#tools"onclick="filterTag('Gaming')">Gaming</a>  
+                    <a href="#base"onclick="filterTag('Entertinement')">Entertinement</a>
+                    <a href="#custom"onclick="filterTag('Photography')">Photography</a>               
+                </div>
+
+                <div style="
+                    width: 21px;
+                    height: 21px;
+                    margin-top: 5px;
+                    background-image: url(design_files/images/right.svg);
+                    cursor: pointer;
+                "
+                id="slideRight"
+                >
+                </div>
+            </div>
+
+
+        </div>
+
+    </header>
+
+    <main class="main-home">
+        <div class="wrapper-home">
+            <div class="root-content" id="root">
+                <div class="root-item">
+                    <span class="root-tag tag-photography"># Technology</span>
+                    <a href=""><h2 class="root-title">Lorem Ipsum dolor sit amet</h2></a>
+                    <p class="root-des">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
+                    <span class="root-date">12 December 2020</span>
+                </div>
+            </div>
+            <div class="tag-wrap">
+                <div class="tags">
+                    <div onclick="filterTag('Technology')" class="tag">
+                        <h2 class="tag-title">Technology</h2>
+                    </div>
+                    <div onclick="filterTag('Design')" class="tag">
+                        <h2 class="tag-title">Design</h2>
+                    </div>
+
+                    <div onclick="filterTag('Food')" class="tag">
+                        <h2 class="tag-title">Food</h2>
+                    </div>
+
+                    <div onclick="filterTag('Culture')" class="tag">
+                        <h2 class="tag-title">Culture</h2>
+                    </div>
+
+                    <div onclick="filterTag('Gaming')" class="tag">
+                        <h2 class="tag-title">Gaming</h2>
+                    </div>
+
+                    <div onclick="filterTag('Music')" class="tag">
+                        <h2 class="tag-title">Music</h2>
+                    </div>
+
+                    <div onclick="filterTag('Science')" class="tag">
+                        <h2 class="tag-title">Science</h2>
+                    </div>
+
+                    <div onclick="filterTag('Entertinement')" class="tag">
+                        <h2 class="tag-title">Entertinement</h2>
+                    </div>
+
+                    <div onclick="filterTag('Photography')" class="tag">
+                        <h2 class="tag-title">Photography</h2>
+                    </div>
+
+                    <div onclick="filterTag('Travel')" class="tag">
+                        <h2 class="tag-title">Travel</h2>
+                    </div>
+                    <div onclick="filterTag('')" class="tag">
+                        <h2 class="tag-title">All</h2>
+                    </div>
+                </div>
+
+                <nav class="links-rd">
+                    <a href="">Terms</a>
+                    <span style="margin:0 5px;">·</span>                   
+                    <a href="">About</a>
+                    <span style="margin:0 5px;">·</span>  
+                    <a href="write.html">Write a story</a>
+                    <span style="margin:0 5px;">·</span>  
+                    <a href="setting.html">Settings</a>
+                </nav>
+            </div>
+        </div>
+    </main>
+
+    <div class="progress-lay">
+        <div class="prog-inner">
+            <div class="prog-inner-img"></div><br>
+        </div>
+    </div>
+
+    <div class="search-ui" id="s-lay">
+        <div style="display: flex;justify-content: space-between;">
+
+            <div style="display: flex;">
+                <div class="newpost-icon" onclick="fadethis()">
+                    <div class="add-icon" style="background-image: url(design_files/images/back.svg);"></div>
+                </div>
+                <img src="design_files/images/favicon.png" class="fav" alt="Mement">
+            </div>
+
+            <div class="newpost-icon" onclick="clearSearch()" style="margin-right: 0;">
+                <div class="add-icon" style="background-image: url(design_files/images/close.svg);"></div>
+            </div>
+
+        </div>
+
+        <input type="text" oninput="searchPop()" id="mo-search" class="mobile-search" placeholder="search">
+    </div>
+
+    <script>
+        function fadethis(){
+            $ ( '#s-lay' ).fadeOut();
+        }
+
+        function viewSearch(){
+            $ ( '#s-lay' ).fadeIn();
+        }
+
+        function searchPop(){
+            var qry = $ ( '#mo-search' ).val();
+            $( '#search-qry' ).val(qry)
+        }
+
+        function clearSearch(){
+            $( '#search-qry' ).val('')
+            $( '#mo-search' ).val('')
+            filterItem()
+        }
+    </script>
+    
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-storage.js"></script>
+
+    <script src="js/config.js"></script>
+    <script src="js/filter.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/home.js"></script>
+    <script src="js/list.js"></script>
+    <script src="js/index.js"></script>
+
+    <script>
+
+        firebase.auth().onAuthStateChanged(function (user) {
+
+            if (!user) {
+                window.location.href = "sign-in.html"
+            }
+            else{  
+                try {
+                    console.log(user.email)
+                } catch (error) {
+                    console.log('error')
+                }              
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+const urlParams = new URLSearchParams(window.location.search);
+var bucket = decodeURI(urlParams.get('read'));
+
+get_data_async()
+
+function get_data_async(){
+
+    try{
+        firebase.database().ref('posts/' + bucket).on('value', function (snapshot) {
+            try {
+                $( '#view-title' ).text(snapshot.val().title);
+                $( '#view-description' ).text(snapshot.val().content);
+                $( '#view-date' ).text(snapshot.val().date);
+                $( '#post-topic' ).text(snapshot.val().topic);
+                $( '#prof-red' ).attr("href", "profile.html?id=" + snapshot.val().owner);
+
+                document.title = snapshot.val().title + " on Mement"
+
+                setUserInfo(snapshot.val().owner)
+            
+            } catch (error) {
+                window.location.replace('404.html')
+            }
+
+        });
+    }
+    catch(error){
+
+    }
+
+}
+
+function setUserInfo(bucketsufix){
+    try{
+        firebase.database().ref('users/profile/' + bucketsufix.replace(/\./g, '<dot>')).on('value', function (snapshot) {
+            try {
+                $( '#user-pic' ).attr("src", snapshot.val().pic)
+                $( '#my-pic-ii' ).attr("src", snapshot.val().pic)
+                $( '#owner-username' ).text(snapshot.val().username)
+                stop_loading();
+
+            } catch (error) {
+                window.location.replace('404.html')
+            }
+
+        });
+    }
+    catch(error){
+
+    }
+}

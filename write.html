@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="https://quotr-stories.github.io/css/style.css">
+    <link rel="stylesheet" type="text/css" href="https://quotr-stories.github.io/css/responsive.css">
+    <link rel="stylesheet" type="text/css" href="https://quotr-stories.github.io/css/font.css">
+    <link rel="stylesheet" type="text/css" href="design_files/css/styleonly.css">
+
+    <link rel="shortcut icon" type="image/png" href="design_files/images/favicon.png" />
+    <title>Write your story on Mement</title>
+</head>
+
+<body>
+    <header>
+
+        <div class="navbar float-nav" >
+
+            <img src="design_files/images/favicon.png" class="fav" alt="">
+            <div class="nav-write">
+                <a href="index.html">Back to home</a>
+            </div>
+
+            <div>
+                <a id="goPublish"  href="javascript:void(0);" class="link-button">Publish</a>
+            </div>
+        </div>
+
+    </header>
+
+    <main class="write-main">
+
+        <div class="welcome-section">
+            <p class="welcome-write">Write your ideas, stories or anything and make it delivered to random peoples to
+                make them motivated with your inspirational two line thoughts</p>
+        </div>
+
+        <select name="" style="display: inline-block;width: auto;" class="form-control setup-control" id="topic">
+            <option>Technology</option>
+            <option>Design</option>
+            <option>Food</option>
+            <option>Culture</option>
+            <option>Gaming</option>
+            <option>Music</option>
+            <option>Science</option>
+            <option>Entertinement</option>
+            <option>Travel</option>
+            <option>Photography</option>
+        </select>
+
+        <div class="link-flex">
+            <h1 data-placeholder="Write your Awesome title here!" title="Your catchy title!" contenteditable="true"
+                id="write-title"></h1>
+        </div>
+
+        <textarea  id="write-description" title="Your awesome description with maximum 55 letters."
+            placeholder="Content here!"></textarea>
+
+            <script>
+                var textarea = document.getElementById('write-description');
+
+                    textarea.addEventListener('keydown', autosize);
+                                
+                    function autosize(){
+                    var el = this;
+                    setTimeout(function(){
+                        el.style.cssText = 'height:auto; padding:0';
+                        // for box-sizing other than "content-box" use:
+                        // el.style.cssText = '-moz-box-sizing:content-box';
+                        el.style.cssText = 'height:' + el.scrollHeight + 'px';
+                    },0);
+                    }
+            </script>
+
+    </main>
+
+    <div class="message-pop">
+        <div class="msg-text">
+            <h4 id="msg_title"></h4>
+            <p id="msg_des"></p>
+        </div>
+        <a id="close-msg" href="javaScript:void(0)">Okay</a>
+    </div>
+
+    <div class="progress-lay">
+        <div class="prog-inner">
+            <div class="prog-inner-img"></div><br>
+            <div class="prog-bar"></div>
+        </div>
+    </div>
+
+    <script>
+                firebase.auth().onAuthStateChanged(function (user) {
+
+                if (!user) {
+                    window.location.href = "sign-in.html"
+                }
+                else{  
+                    try {
+                        console.log(user.email)
+                    } catch (error) {
+                        console.log('error')
+                    }              
+                }
+                });
+    </script>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-storage.js"></script>
+
+    <script src="js/app.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/write.js"></script>
+
+</body>
+
+</html>

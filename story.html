@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="https://quotr-stories.github.io/css/style.css">
+    <link rel="stylesheet" type="text/css" href="https://quotr-stories.github.io/css/responsive.css">
+    <link rel="stylesheet" type="text/css" href="https://quotr-stories.github.io/css/font.css">
+
+    <link rel="stylesheet" type="text/css" href="design_files/css/styleonly.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="design_files/images/favicon.png" />
+
+    <title>Mement - Random stories</title>
+
+</head>
+
+<body>
+    <header>
+        <div class="q-bar">
+            <a href="index.html">
+                <img src="design_files/images/favicon.png" class="fav" alt="Mement">
+            </a>
+            <div>
+                <img src="design_files/images/monkey.gif"  class="fav home-prof" id="my-pic-ii" alt="Mement">
+            </div>
+            
+
+    </header>
+
+    <main class="view-main">
+        <p id="view-date">26 December 2019</p>
+        <h1 class="view-title" id="view-title">
+            Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur
+        </h1>
+        <div class="user-info">
+            <img id="user-pic" class="user-icon" src="design_files/images/de-pic.png" alt="">
+            <a href="#" style="text-decoration: none; " id="prof-red">
+             <h4 id="owner-username" class="user-name"></h4>
+            </a>
+            <div>
+                 <div id="post-topic" class="user-box">Power User</div>
+            </div>
+        </div>
+        <p class="view-description" id="view-description" style="margin-bottom: 50px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dignissim laoreet enim, nec faucibus
+            erat blandit nec. Sed vitae diam id leo lobortis gravida. Morbi nec lacinia eros. Nunc sit amet turpis
+            mollis, feugiat ante nec, efficitur augue. Aenean facilisis orci sit amet arcu rhoncus pellentesque. Duis
+            ultricies vehicula augue eget tempor. Suspendisse et elementum ipsum. Donec viverra porta dolor, et
+            fermentum lectus molestie eget. Vestibulum volutpat tellus vel consectetur pellentesque. Aenean sed posuere
+            libero. Aliquam in tortor convallis, maximus nulla sed, hendrerit nulla. Pellentesque sollicitudin nunc quis
+            ante fermentum blandit eu ullamcorper est. Morbi viverra quam leo, non tincidunt ligula hendrerit quis.
+        </p>
+    </main>
+
+    <div class="message-pop">
+        <div class="msg-text">
+            <h4 id="msg_title"></h4>
+            <p id="msg_des"></p>
+        </div>
+        <a id="close-msg" href="javaScript:void(0)">Okay</a>
+    </div>
+
+    <div class="progress-lay">
+        <div class="prog-inner">
+            <div class="prog-inner-img"></div><br>
+            <div class="prog-bar"></div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footr">
+            <nav class="links-rd" id="footr-content">
+                <a href="">Terms</a>
+                <span style="margin:0 5px;">·</span>                   
+                <a href="">About</a>
+                <span style="margin:0 5px;">·</span>  
+                <a href="write.html">Write a story</a>
+                <span style="margin:0 5px;">·</span>  
+                <a href="setting.html">Settings</a>
+            </nav>
+        </div>
+    </footer>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-storage.js"></script>
+    
+    <script src="js/app.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/story.js"></script>
+
+
+
+</body>
+
+</html>
