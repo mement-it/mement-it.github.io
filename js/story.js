@@ -14,7 +14,7 @@ function get_data_async(){
                 .replace(/:h/g, "<br><br><span class='heading'>").replace(/h:/g, "</span><br>")
                 .replace(/:i/g, "<span class='italic'>").replace(/i:/g, "</span>")
                 .replace(/:c/g, "<span class='code'>").replace(/c:/g, "</span>")
-                .replace(/\n/g, "<br>")
+                .replace(new RegExp('\r?\n','g'), '<br>');
 
                 $( '#view-title' ).text(snapshot.val().title);
                 $( '#view-description' ).html(content);
