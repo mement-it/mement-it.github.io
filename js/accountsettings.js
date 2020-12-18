@@ -76,6 +76,10 @@ function update_prof(){
             address: address,
             pic:pic
       
+          }function(error){
+              if(!error){
+                  window.location.replace('index.html');
+              }
           });
 
           pop_msg('Message!','Your profile is being updated');
