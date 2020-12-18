@@ -12,7 +12,12 @@ firebase.database().ref('posts').once('value', function (snapshot) {
 
       `)
       var sh_posts = shuffle(Object.values(posts))
-      document.querySelector('#root').innerHTML = sh_posts.join('');
+      document.querySelector('#root').innerHTML = sh_posts.join('')
+           .replace(/:b/g, "").replace(/b:/g, "")
+           .replace(/:h/g, "").replace(/h:/g, "")
+           .replace(/:i/g, "").replace(/i:/g, "")
+           .replace(/:c/g, "").replace(/c:/g, "")
+           .replace(/\\n/g, '');;
 
       stop_loading();
      }
