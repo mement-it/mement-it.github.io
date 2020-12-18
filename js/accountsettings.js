@@ -76,7 +76,7 @@ function update_prof(){
             address: address,
             pic:pic
       
-          }function(error){
+          }, function(error){
               if(!error){
                   window.location.replace('index.html');
               }
