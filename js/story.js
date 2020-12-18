@@ -11,7 +11,7 @@ function get_data_async(){
                 
                  var content = snapshot.val().content
                 .replace(/:b/g, "<span class='bold'>").replace(/b:/g, "</span>")
-                .replace(/:h/g, "<br><br><span class='heading'>").replace(/h:/g, "</span><br>")
+                .replace(/:h/g, "<span class='heading'>").replace(/h:/g, "</span>")
                 .replace(/:i/g, "<span class='italic'>").replace(/i:/g, "</span>")
                 .replace(/:c/g, "<span class='code'>").replace(/c:/g, "</span>")
                 .replace(/\\n/g, '<br>');
