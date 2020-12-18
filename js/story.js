@@ -8,8 +8,15 @@ function get_data_async(){
     try{
         firebase.database().ref('posts/' + bucket).on('value', function (snapshot) {
             try {
+                
+                 var content = snapshot.val().content
+                .replace(/:b/g, "<span class='bold'>").replace(/b:/g, "</span>")
+                .replace(/:h/g, "<br><br><span class='heading'>").replace(/h:/g, "</span><br>")
+                .replace(/:i/g, "<span class='italic'>").replace(/i:/g, "</span>")
+                .replace(/:c/g, "<span class='code'>").replace(/c:/g, "</span>");
+
                 $( '#view-title' ).text(snapshot.val().title);
-                $( '#view-description' ).text(snapshot.val().content);
+                $( '#view-description' ).html(content);
                 $( '#view-date' ).text(snapshot.val().date);
                 $( '#post-topic' ).text(snapshot.val().topic);
                 $( '#prof-red' ).attr("href", "profile.html?id=" + snapshot.val().owner);
