@@ -1,8 +1,9 @@
 const urlParams = new URLSearchParams(window.location.search);
 var bucket_id = decodeURI(urlParams.get('id'));
+var bucket_id_parsed = bucket_id.replace(/\./g, "<dot>")
 getUserInfo();
 function getUserInfo(){
-    var bucket_id_parsed = bucket_id.replace(/\./g, "<dot>")
+
     firebase.database().ref('users/profile/' + bucket_id_parsed ).once('value', function (snapshot) {
          try{
 
