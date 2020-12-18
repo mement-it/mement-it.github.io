@@ -17,28 +17,42 @@
     <link id="favicon-prof" rel="shortcut icon" type="image/png" href="design_files/images/favicon.png" />
 </head>
 
-<body>
+<body style="overflow: hidden;">
     <header>
-        <div class="border-bar">
+        <div class="border-bar" style="padding:10px;">
             <a href="index.html">
                 <img src="design_files/images/favicon.png" class="fav" alt="Mement">
             </a>
-            <div></div>
-            <a href="index.html" class="write-a-story-link">Go to home →</a>
+        <div></div>
+            <a href="index.html" style="margin-top: 10px;" class="write-a-story-link">Go to home →</a>
 
     </header>
-    <div class="wrapper">
-        <div class="profile-inner">
-            <div>
-                <img id="profile-pic-full" src="design_files/images/registerback.jpg" alt="@yourself">
+    <main class="profile-wrap" id="profile-container">
+        <div class="wrapper p-child">
+            <div class="profile-inner">
+                <div>
+                    <img id="profile-picf-fusll" class="profile-pic-full" src="design_files/images/monkey.gif" alt="@yourself">
+                </div>
+                <div>
+                    <h1 id="view-name" class="user-name-bio">Harry Tom</h1>
+                    <p id="view-bio" class="bio-full">Apparently, this user prefer keeping mistery on him.</p>
+                    <div id="view-add" class="user-box">harrytom2606@gmail.com</div>
+                </div>
             </div>
-            <div>
-                <h1 id="view-name" class="user-name-bio">Harry Tom</h1>
-                <p id="view-bio" class="bio-full">Apparently, this user prefer keeping mistery on him.</p>
-                <div id="view-add" class="user-box">harrytom2606@gmail.com</div>
+            <a href="#my-posts">
+                <div class="go-bottom" onclick="alert('lol')">
+                    <div class="bot-icon" style="background-image: url('design_files/images/back.svg');"></div>
+                </div>
+            </a>
+            
+
+        </div>
+
+        <div class="wrapper p-child root-wrap">
+            <div class="root-prof" id="my-posts">  
             </div>
         </div>
-    </div>
+    </main>
 
     <footer>
         <div class="footr">
