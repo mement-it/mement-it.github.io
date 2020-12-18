@@ -762,3 +762,16 @@ div.scrollmenu a {
 .format-bar button:hover{
     background-color: whitesmoke;
 }
+
+.delete-icon{
+    height: 22px;
+    width: 22px;
+    background-image: url(../images/delete.svg);
+    margin-top: 9px;
+    margin-left: 10px;
+    border-radius: 4px;
+}
+
+.delete-icon:hover{
+    background-color: rgba(230, 230, 230, 1);
+}
