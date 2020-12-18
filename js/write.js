@@ -70,12 +70,19 @@ function list_data(){
                 window.location.replace('story.html?read=' + bucket_post)
             }
         });
+	    
+        /*var obj_post = {};
+        obj_post[id] = bucket_post;*/
 
-        var obj_post = {};
-        obj_post[id] = bucket_post;
+        var string = content_text;
+        var length = 150;
+        var prev_text = string.substring(0, length);
 
-
-        firebase.database().ref('users/profile/' + bucketsufix + '/posts').set(obj_post);
+        firebase.database().ref('users/profile/' + bucketsufix + '/posts/' + id).set({
+            title:content_title,
+            link:bucket_post,
+            text:prev_text
+        });
     }
       catch(error){
         pop_msg('Message', error)
