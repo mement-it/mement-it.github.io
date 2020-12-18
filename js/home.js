@@ -25,6 +25,7 @@ function update_usr(){
             my_email = user.email; 
 
             $( '#view-myprofile' ).attr('href', 'profile.html?id=' + my_email)
+            $( '#my-posts-home' ).attr('href', 'profile.html?id=' + my_email + '#my-posts')
             get_to_update(); 
         }
     });
