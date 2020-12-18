@@ -81,3 +81,86 @@ function list_data(){
         pop_msg('Message', error)
     }
 }
+
+
+//Format options
+
+function makeBold(){
+	var highlight = window.getSelection();  
+ 
+    var span = ' :b' + highlight + 'b: ';
+    var element = $( '#write-description' );
+
+    var textarea = document.getElementById("write-description");
+ 
+    var len = textarea.value.length;
+     var start = textarea.selectionStart;
+     var end = textarea.selectionEnd;
+     var sel = textarea.value.substring(start, end);
+   
+     // This is the selected text and alert it
+    var replace = ' :b' + sel + 'b: ';
+   
+    // Here we are replacing the selected text with this one
+   textarea.value =  textarea.value.substring(0,start) + replace + textarea.value.substring(end,len);
+}
+
+function makeItalic(){
+	var highlight = window.getSelection();  
+ 
+    var span = ' :i' + highlight + 'i: ';
+    var element = $( '#write-description' );
+
+    var textarea = document.getElementById("write-description");
+ 
+    var len = textarea.value.length;
+     var start = textarea.selectionStart;
+     var end = textarea.selectionEnd;
+     var sel = textarea.value.substring(start, end);
+   
+     // This is the selected text and alert it
+    var replace = ' :i' + sel + 'i: ';
+   
+    // Here we are replacing the selected text with this one
+   textarea.value =  textarea.value.substring(0,start) + replace + textarea.value.substring(end,len);
+}
+
+function makeCode(){
+	var highlight = window.getSelection();  
+ 
+    var span = ' :c' + highlight + 'c: ';
+    var element = $( '#write-description' );
+
+    var textarea = document.getElementById("write-description");
+ 
+    var len = textarea.value.length;
+     var start = textarea.selectionStart;
+     var end = textarea.selectionEnd;
+     var sel = textarea.value.substring(start, end);
+   
+     // This is the selected text and alert it
+    var replace = ' :c' + sel + 'c: ';
+   
+    // Here we are replacing the selected text with this one
+   textarea.value =  textarea.value.substring(0,start) + replace + textarea.value.substring(end,len);
+}
+
+function makeTitle(){
+	var highlight = window.getSelection();  
+ 
+    var span = ' :c' + highlight + 'c: ';
+    var element = $( '#write-description' );
+
+    var textarea = document.getElementById("write-description");
+ 
+    var len = textarea.value.length;
+     var start = textarea.selectionStart;
+     var end = textarea.selectionEnd;
+     var sel = textarea.value.substring(start, end);
+   
+     // This is the selected text and alert it
+    var replace = ' :h' + sel + 'h: ';
+   
+    // Here we are replacing the selected text with this one
+   textarea.value =  textarea.value.substring(0,start) + replace + textarea.value.substring(end,len);
+}
