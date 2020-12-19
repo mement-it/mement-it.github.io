@@ -33,6 +33,7 @@ function get_data_async(){
                 .replace(/:h/g, "<br><br><span class='heading'>").replace(/h:/g, "</span><br>")
                 .replace(/:i/g, "<span class='italic'>").replace(/i:/g, "</span>")
                 .replace(/:c/g, "<span class='code'>").replace(/c:/g, "</span>")
+                .replace(/;snap\[/g, "<img class='img-post' src='").replace(/\]snap:/g, "' >")
                 .replace(/\\n/g, '<br>');
 
                 $( '#view-title' ).text(snapshot.val().title);
