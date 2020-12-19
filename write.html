@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="https://quotr-stories.github.io/css/responsive.css">
     <link rel="stylesheet" type="text/css" href="https://quotr-stories.github.io/css/font.css">
     <link rel="stylesheet" type="text/css" href="design_files/css/styleonly.css">
+    <link rel="stylesheet" type="text/css" href="design_files/css/responsive.css">
 
     <link rel="shortcut icon" type="image/png" href="design_files/images/favicon.png" />
     <title>Write your story on Mement</title>
@@ -95,6 +96,48 @@
             </script>
 
     </main>
+    
+        <style>
+        /*Text formatiing*/
+        .bold{
+            font-family: HelveticaM;
+        }
+        .italic{
+            font-style: italic;
+        }
+        .heading{
+            font-family: HelveticaB;
+            font-size: 32px;
+        }
+        .code{
+            font-family: monospace;
+            color: gray;
+            background-color: #f8f8ff;
+            margin: 0 5px;
+            font-size: 23px;
+        }
+    </style>
+
+    <div class="write-preview" id="write-preview">
+        <button class="close-prev" onclick="document.getElementById('write-preview').style.display = 'none'">Close Preview</button>
+        <div class="preview-space" >
+            <style>
+                #p-view{
+                    font-family: LibertinusR;
+                    font-size: 20px;
+                    line-height: 32px;
+                    letter-spacing: -0.003em;
+                    color: #24292e;
+                    width: 100%;
+                    word-wrap: break-word;
+                    outline: none;
+                    border: none;
+                    resize: none;
+                }
+            </style>
+            <p id="p-view" style="max-width: 100%;"></p>
+        </div>
+    </div>
 
     <div class="message-pop">
         <div class="msg-text">
@@ -108,6 +151,12 @@
         <div class="prog-inner">
             <div class="prog-inner-img"></div><br>
             <div class="prog-bar"></div>
+        </div>
+    </div>
+    
+    <div class="float-prev" onclick="document.getElementById('write-preview').style.display = 'block'">
+        <div class="float-icon">
+            preview
         </div>
     </div>
 
