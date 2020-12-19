@@ -817,4 +817,5 @@ div.scrollmenu a {
     right: 20px;
     padding: 5px 8px;
     color: white;
+    cursor:pointer;
 }
