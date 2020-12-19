@@ -206,11 +206,7 @@ file.addEventListener("change", ev=>{
 
 
 function setPreview(){
-    try {
-        
-    } catch (error) {
-        alert(error)
-    }
+
     var p_content = $( '#write-description' ).val()                 
     .replace(/:b/g, "<span class='bold'>").replace(/b:/g, "</span>")
     .replace(/:h/g, "<br><br><span class='heading'>").replace(/h:/g, "</span><br>")
@@ -218,6 +214,6 @@ function setPreview(){
     .replace(/:c/g, "<span class='code'>").replace(/c:/g, "</span>")
     .replace(/:snap\[/g, "<img class='img-post' src='").replace(/\]snap:/g, "'>'")
     .replace(/\\n/g, '<br>');
-
+	console.log(p_content);
     $( '#p-view' ).html( p_content )
 }
