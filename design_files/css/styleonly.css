@@ -738,9 +738,8 @@ div.scrollmenu a {
 
 .format-bar{
     background-color: white;
-
-    width: 135px;
-    left: 80px;
+    width: 165px;
+    left: 95px;
     top: 20px;
 }
 
@@ -774,4 +773,9 @@ div.scrollmenu a {
 
 .delete-icon:hover{
     background-color: rgba(230, 230, 230, 1);
+}
+
+.img-post{
+    width: 100%;
+    margin: 25px 0;
 }
