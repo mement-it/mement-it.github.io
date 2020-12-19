@@ -808,3 +808,13 @@ div.scrollmenu a {
     outline: none;
     background-color: transparent;
 }
+
+.float-prev{
+    background-color: #03a87c;
+    border-radius: 30px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 5px 8px;
+    color: white;
+}
