@@ -171,3 +171,35 @@ function makeTitle(){
     // Here we are replacing the selected text with this one
    textarea.value =  textarea.value.substring(0,start) + replace + textarea.value.substring(end,len);
 }
+
+function addImage(uri){
+    try {
+        var curPos = document.getElementById("write-description").selectionStart; 
+        let x= $('#write-description').val();
+        let text_to_insert= ":snap[" + uri + "]snap:"
+        $('#write-description').val(x.slice(0,curPos)+text_to_insert+x.slice(curPos));
+    } catch (error) {
+        pop_msg(error)
+    }
+}
+
+const file = document.getElementById('file');
+
+$( '#image-add' ).click(function(){
+    $( '#file' ).click()
+    return false;
+})
+
+file.addEventListener("change", ev=>{
+    const formdata = new FormData()
+    formdata.append("image", ev.target.files[0])
+    fetch("https://api.imgur.com/3/image/", {
+        method: "post",
+        headers:{
+            Authorization: " Client-ID 79b89d2f1266ff6"
+        },
+        body:formdata
+    }).then(data => data.json()).then(data => {
+        addImage(data.data.link);
+    })
+})
