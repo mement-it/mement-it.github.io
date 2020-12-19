@@ -203,3 +203,21 @@ file.addEventListener("change", ev=>{
         addImage(data.data.link);
     })
 })
+
+
+function setPreview(){
+    try {
+        
+    } catch (error) {
+        alert(error)
+    }
+    var p_content = $( '#write-description' ).val()                 
+    .replace(/:b/g, "<span class='bold'>").replace(/b:/g, "</span>")
+    .replace(/:h/g, "<br><br><span class='heading'>").replace(/h:/g, "</span><br>")
+    .replace(/:i/g, "<span class='italic'>").replace(/i:/g, "</span>")
+    .replace(/:c/g, "<span class='code'>").replace(/c:/g, "</span>")
+    .replace(/:snap\[/g, "<img class='img-post' src='").replace(/\]snap:/g, "'>'")
+    .replace(/\\n/g, '<br>');
+
+    $( '#p-view' ).html( p_content )
+}
